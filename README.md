@@ -19,9 +19,9 @@
 
 <p align="center">
   <a href="https://docs.github.com/en/actions/quickstart">                          <img alt="" src="https://img.shields.io/badge/CI-github-brightgreen?logo=github&logoColor=white"></a>
-  <a href="https://github.com/destin-v/vs_codex/actions/workflows/pre-commit.yml">  <img alt="pre-commit" src="https://github.com/destin-v/vs_codex/actions/workflows/pre-commit.yml/badge.svg"></a>
-  <a href="https://github.com/destin-v/vs_codex/actions/workflows/sphinx.yml">      <img alt="sphinx" src="https://github.com/destin-v/vs_codex/actions/workflows/sphinx.yml/badge.svg"></a>
-  <a href="https://github.com/destin-v/vs_codex/actions/workflows/pytest.yml">      <img alt="pytest" src="https://github.com/destin-v/vs_codex/actions/workflows/pytest.yml/badge.svg"></a>
+  <a href="https://github.com/destin-v/codex/actions/workflows/pre-commit.yml">  <img alt="pre-commit" src="https://github.com/destin-v/codex/actions/workflows/pre-commit.yml/badge.svg"></a>
+  <a href="https://github.com/destin-v/codex/actions/workflows/sphinx.yml">      <img alt="sphinx" src="https://github.com/destin-v/codex/actions/workflows/sphinx.yml/badge.svg"></a>
+  <a href="https://github.com/destin-v/codex/actions/workflows/pytest.yml">      <img alt="pytest" src="https://github.com/destin-v/codex/actions/workflows/pytest.yml/badge.svg"></a>
 </p>
 
 This is a development template designed with VSCode configurations, development containers, testing/profiling utilities, and automatic documentation.  The code is designed to run with Black to perform automatic formatting and uses pre-commit to check all commits.
@@ -34,7 +34,7 @@ Make sure to replace the following keywords in this repo:
 
 | Variable | User Defined |
 | -------- | ------------ |
-| vs_codex | project name |
+| codex    | project name |
 | destin-v | GitHub name  |
 | W. Li    | author name  |
 

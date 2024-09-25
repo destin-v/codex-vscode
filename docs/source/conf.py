@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.abspath("../.."))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project: str = "vs_codex"
+project: str = "codex"
 copyright: str = "2024, W. Li"
 author: str = "W. Li"
 release: str = "1.00"
@@ -67,7 +67,7 @@ html_theme_options: dict = {
         },
         {
             "name": "GitHub",
-            "url": "https://github.com/destin-v/vs_codex/actions",
+            "url": "https://github.com/destin-v/codex/actions",
             "icon": "fa-solid fa-vial-circle-check",
             "type": "fontawesome",
         },
@@ -89,7 +89,7 @@ html_theme_options: dict = {
         "image_light": "_static/logo.svg",
         "image_dark": "_static/logo.svg",
     },
-    "repository_url": "https://github.com/destin-v/vs_codex",  # repo link
+    "repository_url": "https://github.com/destin-v/codex",  # repo link
     "use_repository_button": True,
     "use_sidenotes": True,  # allow Edward Tufte style side-nodes
     # "footer_start": [

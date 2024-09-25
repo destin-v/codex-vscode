@@ -32,7 +32,7 @@ exclude = '''
 '''
 
 [tool.poetry]
-name = "vs_codex"
+name = "codex"
 version = "0.1.0"
 description = ""
 authors = ["DestinV <peddky8e@duck.com>"]
