@@ -1,0 +1,36 @@
+##########################################################################################
+#   DESCRIPTION:  Perform runner checks.
+#        AUTHOR:  W. Li
+#       VERSION:  1.0
+#       CREATED:  2/8/2024
+#
+# References:
+# * https://github.com/actions/setup-python/pull/443#issuecomment-1206776401
+# * https://github.com/settings/tokens
+##########################################################################################
+
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+##########################################################################################
+# Jobs
+##########################################################################################
+jobs:
+  ########################################################################################
+  # Check the rate limits of the public Github server.
+  ########################################################################################
+  check-rate-limits:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show Rate Limits
+      run: |
+        curl \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token $TOKEN" \
+          https://api.github.com/rate_limit
+      env:
+        TOKEN: ${{ secrets.GH_GITHUB_COM_TOKEN }}

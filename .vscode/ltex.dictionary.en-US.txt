@@ -1,0 +1,12 @@
+Apptainer
+TestExplorer
+Pytests
+MesloLGLDZ
+Miniconda
+Nox
+nox
+pytest
+PyTests
+Tox
+Tufte
+VSCode
