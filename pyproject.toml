@@ -31,6 +31,13 @@
     )/
     '''
 
+[tool.coverage.report]
+    exclude_also = [
+        "raise AssertionError",
+        "raise NotImplementedError",
+        "if __name__ == .__main__.:",
+        ]
+
 [tool.isort]
     profile = "black"
     force_single_line = "true"
