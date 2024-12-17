@@ -33,6 +33,7 @@
 
 [tool.coverage.report]
     exclude_also = [
+        "noxfile.py",
         "raise AssertionError",
         "raise NotImplementedError",
         "if __name__ == .__main__.:",
