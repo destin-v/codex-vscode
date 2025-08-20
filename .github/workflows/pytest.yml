@@ -51,7 +51,7 @@ jobs:
           --cov-report=html:pytest-results-${{ matrix.python-version }}
       # Save artifacts from pytests.
       - name: Python ${{ matrix.python-version }} Upload Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pytest-results-${{ matrix.python-version }}
           path: pytest-results-${{ matrix.python-version }}
