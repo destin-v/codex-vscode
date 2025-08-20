@@ -29,6 +29,7 @@ concurrency:
 ##########################################################################################
 # Jobs
 ##########################################################################################
+
 jobs:
   ########################################################################################
   # Build the static HTML files we want to publish.
@@ -38,15 +39,18 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      # Checkout the source repo
+      # Checkout the repo
       - name: Checkout source
         uses: actions/checkout@v4
-      # Setup the environment with specified python version
-      - name: Set up Python 3.10
+      # Setup python
+      - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
           token: ${{ secrets.GH_GITHUB_COM_TOKEN }}
-          python-version: "3.10"
+          python-version: "3.13"
+      # Setup uv
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       # Setup Homebrew
       - name: Set up Homebrew
         id: set-up-homebrew

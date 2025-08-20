@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://devguide.python.org/versions/">                <img alt="" src="https://img.shields.io/badge/python-^3.10-blue?logo=python&logoColor=white"></a>
+  <a href="https://devguide.python.org/versions/">                <img alt="" src="https://img.shields.io/badge/python-^3.11-blue?logo=python&logoColor=white"></a>
   <a href="https://github.com/pre-commit/pre-commit">             <img alt="" src="https://img.shields.io/badge/pre--commit-enabled-blue?logo=pre-commit"></a>
   <a href="https://docs.pytest.org/en/7.1.x/getting-started.html"><img alt="" src="https://img.shields.io/badge/pytest-enabled-blue?logo=pytest&logoColor=white"></a>
   <a href="https://sphinx-book-theme.readthedocs.io/en/stable/">  <img alt="" src="https://img.shields.io/badge/Sphinx-^1.1.2-blue?logo=sphinx&logoColor=white"></a>

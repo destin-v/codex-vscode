@@ -44,7 +44,7 @@ Indices and tables
    Backlinks and references
 
 .. |Python Version|
-    image:: https://img.shields.io/badge/python-^3.10-blue?logo=python&logoColor=white
+    image:: https://img.shields.io/badge/python-^3.11-blue?logo=python&logoColor=white
     :target: https://devguide.python.org/versions/
 
 .. |Pre-Commit|
