@@ -65,7 +65,7 @@ jobs:
       - name: Generate Sphinx artifacts
         run: |
           export PYTHONPATH=${{ github.workspace }}
-          nox -s build
+          nox -s sphinx
       # Upload the artifact to the next job
       - name: Upload Sphinx artifact
         uses: actions/upload-artifact@v4

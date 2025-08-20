@@ -31,7 +31,7 @@ To generate the full documentation use Sphinx [#]_.
 
 .. code-block:: console
 
-   uv run nox -rs show_sphinx
+   uv run nox -s show_sphinx
 
 ..
    Footnotes

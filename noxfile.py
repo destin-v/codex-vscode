@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 
 import nox
@@ -45,7 +46,6 @@ def pytest(session: nox.Session) -> None:
 
     install_uv_env(session)
 
-    session.run("cp", "pyproject.toml")
     session.run(
         "pytest",
         "--verbosity=3",
@@ -61,6 +61,22 @@ def pytest(session: nox.Session) -> None:
         "--memray",
     )
 
+    # Cleanup
+    session.run("mv", ".coverage", config.pytest_path_coverage, external=True)
+
+
+@nox.session
+def allure(session: nox.Session) -> None:
+    """Create an Allure report.
+
+    Args:
+        session (nox.Session): The current Nox session.
+    """
+
+    if os.path.exists(config.pytest_path_allure_build) is False:
+        print("Allure build not found, exiting...")
+        return
+
     # Allure report generation
     try:
         session.run(
@@ -75,9 +91,6 @@ def pytest(session: nox.Session) -> None:
         )
     except Exception:
         print("Allure report failed to generate, have you installed Allure via homebrew?")
-
-    # Cleanup
-    session.run("mv", ".coverage", config.pytest_path_coverage, external=True)
 
 
 @nox.session(venv_backend="uv")
@@ -107,6 +120,8 @@ def show_pytest(session: nox.Session) -> None:
     """
 
     pytest(session)
+    allure(session)
+
     view_html(config.pytest_path_summary)
     view_html(config.pytest_path_coverage)
     view_html(config.pytest_path_allure_html)
@@ -121,16 +136,5 @@ def show_sphinx(session: nox.Session) -> None:
     """
 
     sphinx(session)
+
     view_html(config.sphinx_path)
-
-
-@nox.session
-def build(session: nox.Session) -> None:
-    """Build all artifacts.
-
-    Args:
-        session (nox.Session): The current Nox session.
-    """
-
-    # Build external docs
-    sphinx(session)
