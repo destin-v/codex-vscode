@@ -7,7 +7,7 @@ from src.ci.browser import view_html
 
 @dataclass
 class config:
-    """Nox creates a new virtual environment for each individual test.  Thus, it is important for to install all the packages needed for testing.  When using Nox, it will by default grab the current python version available in your environment and run testing with it."""
+    """Configurations."""
 
     # Pytest
     pytest_path_allure_html: str = "docs/source/_static/pytest-allure-html"
@@ -19,20 +19,37 @@ class config:
     sphinx_path: str = "docs/build/html"
 
 
-@nox.session
-def pytest(session: nox.Session):
+def install_uv_env(session: nox.Session) -> None:
+    """Install a uv environment for a Nox session.
+
+    Args:
+        session (nox.Session): _description_
+    """
+    python_path: str = session.virtualenv.location
+    session.run_install(
+        "uv",
+        "sync",
+        "--all-extras",
+        f"--python={python_path}",
+        env={"UV_PROJECT_ENVIRONMENT": python_path},
+    )
+
+
+@nox.session(venv_backend="uv")
+def pytest(session: nox.Session) -> None:
     """Run PyTest coverage.
 
     Args:
         session (nox.Session): The current Nox session.
     """
 
-    session.run("poetry", "install", "--with=dev", "--no-root")
+    install_uv_env(session)
+
+    session.run("cp", "pyproject.toml")
     session.run(
         "pytest",
         "--verbosity=3",
         # -------------- Coverage --------------
-        "--cov-config=.nox/.coveragerc",
         "--cov=./",
         f"--cov-report=html:{config.pytest_path_coverage}",
         # -------------- Summary --------------
@@ -63,14 +80,14 @@ def pytest(session: nox.Session):
     session.run("mv", ".coverage", config.pytest_path_coverage, external=True)
 
 
-@nox.session
-def sphinx(session: nox.Session):
+@nox.session(venv_backend="uv")
+def sphinx(session: nox.Session) -> None:
     """Generate Sphinx documentation.
 
     Args:
         session (nox.Session): The current Nox session.
     """
-    session.run("poetry", "install", "--with=dev", "--no-root")
+    install_uv_env(session)
 
     # Build Sphinx
     session.run("sphinx-apidoc", "-o", "docs/source/pages/api/src", "src")
@@ -82,7 +99,7 @@ def sphinx(session: nox.Session):
 
 
 @nox.session
-def show_pytest(session: nox.Session):
+def show_pytest(session: nox.Session) -> None:
     """Show pytest coverage in HTML.
 
     Args:
@@ -96,7 +113,7 @@ def show_pytest(session: nox.Session):
 
 
 @nox.session
-def show_sphinx(session: nox.Session):
+def show_sphinx(session: nox.Session) -> None:
     """Show Sphinx in HTML.
 
     Args:
@@ -108,7 +125,7 @@ def show_sphinx(session: nox.Session):
 
 
 @nox.session
-def build(session: nox.Session):
+def build(session: nox.Session) -> None:
     """Build all artifacts.
 
     Args:

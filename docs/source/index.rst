@@ -71,7 +71,7 @@ Indices and tables
     Images
 
 .. |Li Productions|
-    image:: https://camo.githubusercontent.com/8a5a84adae2071b1d131af237bc0a15253b91bb86b2761bbd62ed3c3ac7aabea/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d31794674652d5241534363463161686b5967314a79626176692d67576a65386b70
+    image:: https://drive.google.com/uc?export=view&id=1yFte-RASCcF1ahkYg1Jybavi-gWje8kp
     :width: 500
     :target: https://github.com/destin-v
 

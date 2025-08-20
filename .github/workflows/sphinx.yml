@@ -53,13 +53,6 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
       - name: Install Homebrew packages
         run: brew install allure
-      # Install poetry and disable virtual environments
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          virtualenvs-create: false
-          virtualenvs-in-project: false
-          installer-parallel: true
       # Install nox
       - name: Install dependencies
         run: |
@@ -68,7 +61,7 @@ jobs:
       - name: Generate Sphinx artifacts
         run: |
           export PYTHONPATH=${{ github.workspace }}
-          nox -r -s build
+          nox -s build
       # Upload the artifact to the next job
       - name: Upload Sphinx artifact
         uses: actions/upload-artifact@v4

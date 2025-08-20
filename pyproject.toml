@@ -1,29 +1,51 @@
+[project]
+name = "myproject"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.13"
+authors = ["DestinV <peddky8e@duck.com>"]
+license = "MIT"
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+logging = ["loguru", "rich", "typer"]
+cicd = ["black", "mypy", "nox", "pre-commit"]
+math = ["numpy", "pandas"]
+sphinx = [
+    "myst-parser",
+    "pydata-sphinx-theme",
+    "sphinx-book-theme",
+    "sphinx-design",
+]
+pytest = [
+    "allure-pytest",
+    "pytest",
+    "pytest-clarity",
+    "pytest-cov",
+    "pytest-html",
+    "pytest-memray",
+]
+
 [tool.pytest.ini_options]
-    log_cli = true
-    log_cli_level = "INFO"
-    log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
-    log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
 
 [tool.black]
-    line-length = 100
-    include = '\.pyi?$'
-    exclude = '''
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
     /(
         \.eggs
       | \.git
-      | \.hg
-      | \.idea
       | \.mypy_cache
       | \.pytest_cache
-      | \.tox
       | \.venv
       | \.vscode
       | \.nox
       | \docs
-      | _build
-      | buck-out
-      | build
-      | dist
       # The following are specific to Black, you probably don't want those.
       | blib2to3
       | tests/data
@@ -32,58 +54,13 @@
     '''
 
 [tool.coverage.report]
-    exclude_also = [
-        "noxfile.py",
-        "raise AssertionError",
-        "raise NotImplementedError",
-        "if __name__ == .__main__.:",
-        ]
+exclude_also = [
+    "noxfile.py",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
 
 [tool.isort]
-    profile = "black"
-    force_single_line = "true"
-
-[tool.poetry]
-    name = "codex"
-    version = "0.1.0"
-    description = ""
-    authors = ["DestinV <peddky8e@duck.com>"]
-    license = "MIT"
-    readme = "README.md"
-
-[tool.poetry.dependencies]
-    loguru = "^0.7.2"
-    python = "^3.10"
-    rich = "^13.7.0"
-    typer = {extras = ["all"], version = "^0.9.0"}
-
-[tool.poetry.group.cicd.dependencies]
-    black = "*"
-    mypy = "*"
-    nox = "*"
-    pre-commit = "*"
-
-[tool.poetry.group.dev.dependencies]
-    numpy = "*"
-    pandas = "*"
-
-[tool.poetry.group.doc.dependencies]
-    myst-parser = "*"
-    pydata-sphinx-theme = "*"
-    sphinx-book-theme = "*"
-    sphinx-design = "*"
-
-[tool.poetry.group.misc.dependencies]
-    smokeshow = "*"
-
-[tool.poetry.group.test.dependencies]
-    allure-pytest = "*"
-    pytest = "*"
-    pytest-clarity = "^1.0.1"
-    pytest-cov = "*"
-    pytest-html = "*"
-    pytest-memray = "*"
-
-[build-system]
-    requires = ["poetry-core"]
-    build-backend = "poetry.core.masonry.api"
+profile = "black"
+force_single_line = "true"

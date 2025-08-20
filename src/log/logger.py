@@ -13,9 +13,11 @@ def attach_logger(
         path (str): Path of the script.  This is usually `__file__`.
         parent_folder (str): Name of the parent folder to create mirror logging directory.
 
-    .. code-block::
+    Example:
+        ```python
         from src.log.logger import attach_logger
         attach_logger(__file__, "tests")  # `__file__` in python is the full path to the script
+        ```
     """
 
     # Get the relative path of the executing script

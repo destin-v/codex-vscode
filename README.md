@@ -24,7 +24,7 @@
   <a href="https://github.com/destin-v/codex/actions/workflows/pytest.yml">      <img alt="pytest" src="https://github.com/destin-v/codex/actions/workflows/pytest.yml/badge.svg"></a>
 </p>
 
-This is a development template designed with VSCode configurations, development containers, testing/profiling utilities, and automatic documentation.  The code is designed to run with Black to perform automatic formatting and uses pre-commit to check all commits.
+Empty development template for starting new projects.
 
 # 🌎 Global Config
 
@@ -54,9 +54,42 @@ pre-commit autoupdate
 ```
 
 # 🎯 Version Control
-The `pyproject.toml` defines a set of packages with the allowable ranges that you expect to install.  However, poetry builds a `poetry.lock` that defines the specific versions used by your project.  If you want to ensure everyone on your team installs the same version you will need to commit the `poetry.lock` file to your repo.
+The `pyproject.toml` defines your install packages.
 
+Create a new project:
+```bash
+uv init
+```
 
+Create a new environment:
+```bash
+uv venv
+```
+
+Add dependencies:
+```bash
+uv add foo
+```
+
+To create a lock file:
+```bash
+uv lock
+```
+
+To install the lock file:
+```bash
+uv sync
+```
+
+To install optional dependencies:
+```bash
+uv sync --extra foo
+```
+
+To install with all optional dependencies:
+```bash
+uv sync --all-extras
+```
 
 # 🐚 Remote Development
 To generate your SSH keys, type the following command:

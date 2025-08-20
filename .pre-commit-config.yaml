@@ -60,8 +60,9 @@ repos:
     rev: 'v1.0.0'
     hooks:
     -   id: check-gitlab-ci
--   repo: https://github.com/python-poetry/poetry
-    rev: '1.8.0'  # add version here
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.12
     hooks:
-    -   id: poetry-check
+      - id: uv-lock
 exclude: 'LICENSE.md'

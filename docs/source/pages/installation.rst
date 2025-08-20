@@ -8,11 +8,11 @@ To install:
 
 .. code-block:: console
 
-   brew install poetry
+   curl -LsSf https://astral.sh/uv/install.sh | sh
 
 .. code-block:: console
 
-   poetry install
+   uv sync
 
 .. note::
    :class: margin
@@ -21,14 +21,8 @@ To install:
 
 .. code-block:: console
 
-   poetry install --with=dev
+   uv sync --all-extras
 
-
-If you need to `resync` your environment try:
-
-.. code-block:: console
-
-   poetry install --sync
 
 Documentation
 -------------
@@ -37,7 +31,7 @@ To generate the full documentation use Sphinx [#]_.
 
 .. code-block:: console
 
-   nox -rs show_sphinx
+   uv run nox -rs show_sphinx
 
 ..
    Footnotes
