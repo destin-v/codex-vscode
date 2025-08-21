@@ -53,13 +53,24 @@ exclude = '''
     )/
     '''
 
+[tool.coverage.run]
+omit = [
+    # omit everything in /docs
+    "docs/*",
+    # omit this single file
+    "noxfile.py",
+]
+
 [tool.coverage.report]
 exclude_also = [
-    "noxfile.py",
+    # Exclude the following:
+    "def __repr__",
     "raise AssertionError",
     "raise NotImplementedError",
-    "if __name__ == .__main__.:",
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
 ]
+
 
 [tool.isort]
 profile = "black"

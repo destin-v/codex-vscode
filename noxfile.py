@@ -2,6 +2,8 @@ import os
 from dataclasses import dataclass
 
 import nox
+from rich import print
+from rich.panel import Panel
 
 from src.ci.browser import view_html
 
@@ -16,6 +18,9 @@ class config:
     pytest_path_coverage: str = "docs/source/_static/pytest-coverage"
     pytest_path_summary: str = "docs/source/_static/pytest-summary"
 
+    # pyproject
+    pyproject_path: str = "pyproject.toml"
+
     # Documentation
     sphinx_path: str = "docs/build/html"
 
@@ -26,6 +31,9 @@ def install_uv_env(session: nox.Session) -> None:
     Args:
         session (nox.Session): _description_
     """
+
+    print(Panel("🧰 Constructing Virtual Environment"))
+
     python_path: str = session.virtualenv.location
     session.run_install(
         "uv",
@@ -46,11 +54,13 @@ def pytest(session: nox.Session) -> None:
 
     install_uv_env(session)
 
+    print(Panel("🧪 Running Tests..."))
     session.run(
         "pytest",
         "--verbosity=3",
         # -------------- Coverage --------------
         "--cov=./",
+        f"--cov-config={config.pyproject_path}",
         f"--cov-report=html:{config.pytest_path_coverage}",
         # -------------- Summary --------------
         f"--html={config.pytest_path_summary}/index.html",
@@ -74,11 +84,13 @@ def allure(session: nox.Session) -> None:
     """
 
     if os.path.exists(config.pytest_path_allure_build) is False:
-        print("Allure build not found, exiting...")
+        print(Panel("⚠️ Allure build not found, exiting..."))
         return
 
     # Allure report generation
     try:
+        print(Panel("🌐 Building Allure HTML."))
+
         session.run(
             "allure",
             "generate",
@@ -90,7 +102,7 @@ def allure(session: nox.Session) -> None:
             external=True,
         )
     except Exception:
-        print("Allure report failed to generate, have you installed Allure via homebrew?")
+        print(Panel("❗️ Report failed, Did you install Allure using homebrew?"))
 
 
 @nox.session(venv_backend="uv")
@@ -102,9 +114,13 @@ def sphinx(session: nox.Session) -> None:
     """
     install_uv_env(session)
 
-    # Build Sphinx
+    print(Panel("📒 Building Sphinx API: src"))
     session.run("sphinx-apidoc", "-o", "docs/source/pages/api/src", "src")
+
+    print(Panel("🧪 Building Sphinx API: tests"))
     session.run("sphinx-apidoc", "-o", "docs/source/pages/api/tests", "tests")
+
+    print(Panel("🌐 Building Sphinx HTML"))
     session.chdir("docs")
     session.run("make", "clean", external=True)
     session.run("make", "html", external=True)
