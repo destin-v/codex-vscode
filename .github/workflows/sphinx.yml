@@ -39,34 +39,31 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      # Checkout the repo
-      - name: Checkout source
+      # Checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
       # Setup python
       - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
-          token: ${{ secrets.GH_GITHUB_COM_TOKEN }}
           python-version: "3.13"
-      # Setup uv
+      # Setup package managers
       - name: Install uv
         uses: astral-sh/setup-uv@v6
-      # Setup Homebrew
-      - name: Set up Homebrew
-        id: set-up-homebrew
+      - name: Setup Homebrew
         uses: Homebrew/actions/setup-homebrew@master
-      - name: Install Homebrew packages
+      # Install all dependencies
+      - name: Install homebrew dependencies
         run: brew install allure
-      # Install nox
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
-          pip install nox
-      # Use nox to generate the document
-      - name: Generate Sphinx artifacts
+          pip install nox rich
+      # Run Sphinx
+      - name: Run Sphinx
         run: |
           export PYTHONPATH=${{ github.workspace }}
           nox -s sphinx
-      # Upload the artifact to the next job
+      # Upload Sphinx artifact
       - name: Upload Sphinx artifact
         uses: actions/upload-artifact@v4
         with:
