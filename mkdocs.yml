@@ -1,0 +1,70 @@
+site_name: My Docs
+site_url: https://github.com/
+repo_url: https://github.com/
+repo_name: MyRepository
+
+nav:
+  - Home:
+      - README.md
+  - Quickstart:
+      - quickstart/install.md
+  - Setup:
+      - setup/build.md
+  - Tests:
+      - tests/pytest.md
+  - Development:
+      - Note: dev/note.md
+      - VsCode: dev/vscode.md
+      - Pre-commit: dev/precommit.md
+      - Remote: dev/remote.md
+      - Version Control: dev/version.md
+      - CI/CD: dev/cicd.md
+      - Nox: dev/nox.md
+      - CLI: dev/typer.md
+      - Troubleshoot: dev/troubleshoot.md
+  - References:
+      - references/mkdocs.md
+  - About:
+      - about/LICENSE.md
+      - about/author.md
+
+theme:
+  name: material
+
+  features:
+    # Layout
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - search.suggest
+
+    # Code block
+    - content.code.copy
+    - content.code.annotate
+
+  # Logo
+  logo: assets/images/icon.png
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  # Table support
+  - attr_list
+  - tables
+
+  # HTML support
+  - md_in_html
+  - pymdownx.blocks.caption
+
+  # Fenced blocks
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+  # Keys
+  - pymdownx.keys
+
+  # PyMarkdownX Configs
+  - pymdownx.highlight:
+      pygments_lang_class: true

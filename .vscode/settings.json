@@ -1,7 +1,7 @@
 {
     "___________________________Info___________________________": "",
     "comments.Description": "VsCode Python",
-    "comments.Date": "Dec-02-2023",
+    "comments.Date": "2025",
     "___________________________Formatter___________________________": "",
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
@@ -23,13 +23,13 @@
     "workbench.editor.showTabs": "single",
     "___________________________Rulers___________________________": "",
     "editor.rulers": [
-        90
+        100
     ],
     "editor.wordWrap": "wordWrapColumn",
     "[log]": {
         "editor.wordWrap": "off",
     },
-    "editor.wordWrapColumn": 90,
+    "editor.wordWrapColumn": 100,
     "___________________________Configs___________________________": "",
     "python.envFile": "${workspaceFolder}/.vscode/.env",
     "terminal.integrated.env.osx": {
@@ -38,7 +38,19 @@
     "___________________________Plugins___________________________": "",
     "python.analysis.typeCheckingMode": "basic",
     "python.languageServer": "Pylance",
-    "___________________________Linting___________________________": "",
+    "___________________________YAML___________________________": "",
+    "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+    },
+    "yaml.customTags": [
+        "!ENV scalar",
+        "!ENV sequence",
+        "!relative scalar",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+        "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+        "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
+    ],
     "___________________________Testing___________________________": "",
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
