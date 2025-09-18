@@ -22,4 +22,7 @@
   <img alt="" src="https://img.shields.io/badge/CI-pytest-brightgreen?logo=github&logoColor=white"></a>
 </p>
 
+```quote
+Documentation is a love letter you write to your future self.
+```
 ***Description of your project***
