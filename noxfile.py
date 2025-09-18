@@ -13,10 +13,10 @@ class config:
     """Configurations."""
 
     # Pytest
-    pytest_path_allure_html: str = ".nox/tests/pytest-allure-html"
-    pytest_path_allure_build: str = ".nox/tests/pytest-allure-build"
-    pytest_path_coverage: str = ".nox/tests/pytest-coverage"
-    pytest_path_summary: str = ".nox/tests/pytest-summary"
+    pytest_path_allure_html: str = "docs/assets/tests/pytest-allure-html"
+    pytest_path_allure_build: str = "docs/assets/tests/pytest-allure-build"
+    pytest_path_coverage: str = "docs/assets/tests/pytest-coverage"
+    pytest_path_summary: str = "docs/assets/tests/pytest-summary"
 
     # pyproject
     pyproject_path: str = "pyproject.toml"
