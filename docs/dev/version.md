@@ -1,5 +1,18 @@
-# 🎯 Version Control
+## 🎯 Git
 
+```bash
+git config --global user.name "Your Name"
+```
+
+```bash
+git config --global user.email "youremail@yourdomain.com"
+```
+
+```bash
+git config --global core.editor "nvim"
+```
+
+## 📦 uv
 Install uv:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
