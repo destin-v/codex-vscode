@@ -1,7 +1,7 @@
 ## Reports
-### [:simple-pytest:            Nox - PyTest - Summary  ](../../assets/tests/pytest-summary/index.html)
-### [:octicons-checklist-16:    Nox - PyTest - Coverage ](../../assets/tests/pytest-coverage/index.html)
-### [:material-view-dashboard:  Nox - PyTest - Allure   ](../../assets/tests/pytest-allure/index.html)
+### [:simple-pytest:            Nox - PyTest - Summary  ](../assets/tests/pytest-summary/index.html)
+### [:octicons-checklist-16:    Nox - PyTest - Coverage ](../assets/tests/pytest-coverage/index.html)
+### [:material-view-dashboard:  Nox - PyTest - Allure   ](../assets/tests/pytest-allure/index.html)
 
 ## 🧪 PyTests
 

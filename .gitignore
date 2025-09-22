@@ -9,6 +9,7 @@ profile.json
 
 # Tool build directories
 __pycache__
+.cache
 .mypy_cache
 .pytest_cache
 

@@ -9,9 +9,12 @@ nav:
   - Quickstart:
       - quickstart/install.md
   - Learn:
-      - learn/basics.md
+      - Main: learn/main.md
+      - Concepts: learn/concepts.md
+      - Examples: learn/examples.md
+      - FAQ: learn/faq.md
   - Development:
-      - Note: dev/note.md
+      - Main: dev/main.md
       - VsCode: dev/vscode.md
       - Remote: dev/remote.md
       - Version Control: dev/version.md
@@ -27,7 +30,6 @@ nav:
 
 theme:
   name: material
-
   palette:
     # Light mode
     - scheme: default
@@ -51,6 +53,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.path
     - search.suggest
+    - navigation.footer
+    - navigation.indexes
 
     # Code block
     - content.code.copy
@@ -83,5 +87,8 @@ markdown_extensions:
   - pymdownx.highlight:
       pygments_lang_class: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - privacy
