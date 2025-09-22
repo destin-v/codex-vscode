@@ -4,7 +4,7 @@
 	"name": "dev-python",
 	"image": "development-base",
 	"build": {
-		"dockerfile": "../containers/docker/Dockerfile",
+		"dockerfile": "Dockerfile",
 	},
 	// Add arguments that run with the container
 	// These are arguments needed for GPU support on a Linux machine
