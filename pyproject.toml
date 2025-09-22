@@ -30,9 +30,10 @@ pytest = [
     "pytest-memray",
 ]
 docs = [
-    "mkdocs", 
+    "mkdocs",
     "mkdocs-material[imaging]",
     "mkdocs-git-authors-plugin",
+    "mkdocstrings[python]",
 ]
 cicd = [
     "black", 

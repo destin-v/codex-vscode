@@ -23,7 +23,8 @@ nav:
       - CLI: dev/typer.md
       - Troubleshoot: dev/troubleshoot.md
   - References:
-      - references/mkdocs.md
+      - API: references/api.md
+      - MkDocs: references/mkdocs.md
   - About:
       - about/LICENSE.md
       - about/author.md
@@ -92,3 +93,12 @@ markdown_extensions:
 
 plugins:
   - privacy
+  - search
+
+  # Mkdocs auto code generation
+  # https://stackoverflow.com/questions/74209148/automatically-generate-api-reference-for-all-subpackages-modules
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_submodules: true
