@@ -825,7 +825,6 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "loguru" },
-    { name = "mkdocs-glightbox" },
     { name = "rich" },
     { name = "typer" },
 ]
@@ -847,6 +846,7 @@ dev = [
     { name = "black" },
     { name = "mkdocs" },
     { name = "mkdocs-git-authors-plugin" },
+    { name = "mkdocs-glightbox" },
     { name = "mkdocs-material", extra = ["imaging"] },
     { name = "mkdocstrings", extra = ["python"] },
     { name = "mypy" },
@@ -861,6 +861,7 @@ dev = [
 docs = [
     { name = "mkdocs" },
     { name = "mkdocs-git-authors-plugin" },
+    { name = "mkdocs-glightbox" },
     { name = "mkdocs-material", extra = ["imaging"] },
     { name = "mkdocstrings", extra = ["python"] },
 ]
@@ -876,7 +877,6 @@ pytest = [
 [package.metadata]
 requires-dist = [
     { name = "loguru" },
-    { name = "mkdocs-glightbox", specifier = ">=0.5.1" },
     { name = "numpy", marker = "extra == 'math'" },
     { name = "rich" },
     { name = "typer" },
@@ -895,6 +895,7 @@ dev = [
     { name = "black" },
     { name = "mkdocs" },
     { name = "mkdocs-git-authors-plugin" },
+    { name = "mkdocs-glightbox" },
     { name = "mkdocs-material", extras = ["imaging"] },
     { name = "mkdocstrings", extras = ["python"] },
     { name = "mypy" },
@@ -909,6 +910,7 @@ dev = [
 docs = [
     { name = "mkdocs" },
     { name = "mkdocs-git-authors-plugin" },
+    { name = "mkdocs-glightbox" },
     { name = "mkdocs-material", extras = ["imaging"] },
     { name = "mkdocstrings", extras = ["python"] },
 ]

@@ -67,26 +67,24 @@ theme:
     repo: fontawesome/brands/github
 
 markdown_extensions:
-  # Table support
+  # Common extensions
+  - admonition
   - attr_list
+  - md_in_html
   - tables
 
-  # HTML support
-  - md_in_html
+  # Pymarkdown
   - pymdownx.blocks.caption
-
-  # Fenced blocks
-  - admonition
   - pymdownx.details
+  - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.inlinehilite
-
-  # Keys
-  - pymdownx.keys
-
-  # PyMarkdownX Configs
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       pygments_lang_class: true
+
+  # Emoji support
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -94,7 +92,7 @@ markdown_extensions:
 plugins:
   - privacy
   - search
-  - glightbox
+  - glightbox # image view
 
   # Mkdocs auto code generation
   # https://stackoverflow.com/questions/74209148/automatically-generate-api-reference-for-all-subpackages-modules
