@@ -7,7 +7,8 @@ authors = ["DestinV <peddky8e@duck.com>"]
 license = "MIT"
 readme = "README.md"
 dependencies = [
-    "loguru", 
+    "loguru",
+    
     "rich",
     "typer",
 ]
@@ -31,8 +32,9 @@ pytest = [
 ]
 docs = [
     "mkdocs",
-    "mkdocs-material[imaging]",
     "mkdocs-git-authors-plugin",
+    "mkdocs-glightbox",
+    "mkdocs-material[imaging]",
     "mkdocstrings[python]",
 ]
 cicd = [

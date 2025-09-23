@@ -94,6 +94,7 @@ markdown_extensions:
 plugins:
   - privacy
   - search
+  - glightbox
 
   # Mkdocs auto code generation
   # https://stackoverflow.com/questions/74209148/automatically-generate-api-reference-for-all-subpackages-modules

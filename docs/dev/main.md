@@ -1,8 +1,5 @@
-# Note
+# Topics
 
-Make sure to replace the following keywords in this repo:
-
-`destin-v`
 
 <div class="grid cards" markdown>
 
@@ -15,3 +12,9 @@ Make sure to replace the following keywords in this repo:
 - [:fontawesome-solid-bug-slash: **Troubleshooting**](troubleshoot.md)
 
 </div>
+
+!!! note
+
+    Make sure to replace the following keywords in this repo:
+
+    `destin-v`
