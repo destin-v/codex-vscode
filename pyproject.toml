@@ -8,7 +8,6 @@ license = "MIT"
 readme = "README.md"
 dependencies = [
     "loguru",
-    
     "rich",
     "typer",
 ]
@@ -36,6 +35,7 @@ docs = [
     "mkdocs-glightbox",
     "mkdocs-material[imaging]",
     "mkdocstrings[python]",
+    "termynal>=0.13.1",
 ]
 cicd = [
     "black", 

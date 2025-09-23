@@ -90,9 +90,10 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
+  - glightbox
   - privacy
   - search
-  - glightbox # image view
+  - termynal
 
   # Mkdocs auto code generation
   # https://stackoverflow.com/questions/74209148/automatically-generate-api-reference-for-all-subpackages-modules
