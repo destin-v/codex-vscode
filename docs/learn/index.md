@@ -4,9 +4,9 @@ icon: fontawesome/solid/user-graduate
 
 # :fontawesome-solid-user-graduate: Learn
 
-> "Never stop learning, because life never stops teaching" 
+> Never stop learning, because life never stops teaching.
 >
-> **- Lin Pernille**
+> **— Lin Pernille**
 
 <div class="grid cards" markdown>
 

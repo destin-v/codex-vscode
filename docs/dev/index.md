@@ -4,7 +4,7 @@ icon: simple/xdadevelopers
 
 # :simple-xdadevelopers: Development
 
-> “The most important single aspect of software development is to be clear about what you are trying to build.”
+> The most important single aspect of software development is to be clear about what you are trying to build.
 >
 > **— Bjarne Stroustrup**
 
