@@ -31,6 +31,7 @@ nav:
       - references/api.md
       - references/mkdocs.md
   - About:
+      - about/index.md
       - about/LICENSE.md
       - about/authors.md
 
