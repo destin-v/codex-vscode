@@ -1,3 +1,13 @@
+---
+icon: material/rocket-launch
+---
+
+# :material-rocket-launch: Quickstart
+
+> “Learning starts with failure.”
+>
+> **— Josiah Bancroft**
+
 ## 🛠️ uv
 
 Install a package manager:

@@ -1,3 +1,7 @@
+---
+icon: material/home
+---
+
 <p align="center">
   <a href="https://github.com/destin-v">
     <img src="https://raw.githubusercontent.com/destin-v/destin-v/main/docs/pics/logo.gif" alt="drawing" width="500"/>
@@ -22,7 +26,9 @@
   <img alt="" src="https://img.shields.io/badge/CI-pytest-brightgreen?logo=github&logoColor=white"></a>
 </p>
 
-```quote
-Documentation is a love letter you write to your future self.
-```
+
+> Documentation is a love letter you write to your future self.
+>
+> **- Damian Conway**
+
 ***Description of your project***

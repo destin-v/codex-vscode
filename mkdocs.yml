@@ -7,27 +7,28 @@ nav:
   - Home:
       - README.md
   - Quickstart:
-      - quickstart/install.md
+      - quickstart/index.md
   - Learn:
-      - Main: learn/main.md
-      - Concepts: learn/concepts.md
-      - Examples: learn/examples.md
-      - FAQ: learn/faq.md
+      - learn/index.md
+      - learn/concepts.md
+      - learn/examples.md
+      - learn/faq.md
   - Development:
-      - Main: dev/main.md
-      - VsCode: dev/vscode.md
-      - Remote: dev/remote.md
-      - Version Control: dev/version.md
-      - Tests: dev/test.md
-      - CI/CD: dev/cicd.md
-      - CLI: dev/typer.md
-      - Troubleshoot: dev/troubleshoot.md
+      - dev/index.md
+      - dev/vscode.md
+      - dev/remote.md
+      - dev/version.md
+      - dev/test.md
+      - dev/cicd.md
+      - dev/typer.md
+      - dev/troubleshoot.md
   - References:
-      - API: references/api.md
-      - MkDocs: references/mkdocs.md
+      - references/index.md
+      - references/api.md
+      - references/mkdocs.md
   - About:
       - about/LICENSE.md
-      - about/author.md
+      - about/authors.md
 
 theme:
   name: material
@@ -62,8 +63,8 @@ theme:
     - content.code.annotate
 
   # Logo
-  logo: assets/images/icon.png
   icon:
+    logo: material/book-outline
     repo: fontawesome/brands/github
 
 markdown_extensions:

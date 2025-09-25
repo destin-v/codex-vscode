@@ -1,3 +1,9 @@
+---
+icon: octicons/tag-16
+---
+
+# :octicons-tag-16: Version
+
 ## 🎯 Git
 
 ```bash

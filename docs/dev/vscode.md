@@ -1,4 +1,8 @@
-# 🖥️ VSCode
+---
+icon: material/microsoft-visual-studio-code
+---
+
+# :material-microsoft-visual-studio-code: VSCode
 
 This is a compilation of configuration settings, extensions, and add-on recommended for development using VSCode.
 

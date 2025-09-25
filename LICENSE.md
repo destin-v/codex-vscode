@@ -1,3 +1,7 @@
+---
+icon: material/scale-balance
+---
+
 The MIT License (MIT)
 =====================
 

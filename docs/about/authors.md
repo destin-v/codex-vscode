@@ -1,4 +1,8 @@
-# Author
+---
+icon: fontawesome/solid/pen-nib
+---
+
+# :fontawesome-solid-pen-nib: Authors
 
 # John Doe
 

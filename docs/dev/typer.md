@@ -1,4 +1,8 @@
-# Typer
+---
+icon: octicons/terminal-16
+---
+
+# :octicons-terminal-16: Typer
 
 `Typer` is the preferred Command Line Interface (CLI).  Display and formatting to the terminal are provided via `rich`.  The combination of `typer` with `rich` provide a modern terminal interface for most programming needs.
 
