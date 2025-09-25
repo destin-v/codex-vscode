@@ -10,12 +10,11 @@ icon: simple/xdadevelopers
 
 <div class="grid cards" markdown>
 
-- [:material-microsoft-visual-studio-code: **VsCode**](vscode.md)
-- [:fontawesome-solid-computer: **Remote**](remote.md) 
-- [:material-bullseye-arrow: **Version**](version.md) 
-- [:simple-pytest: **Tests**](test.md)
-- [:material-checkbox-marked-circle: **CI/CD**](cicd.md)
-- [:octicons-terminal-16: **CLI**](typer.md)
+- [:material-microsoft-visual-studio-code: **VSCode**](vscode.md)
+- [:material-remote-desktop: **Remote Development**](remote.md) 
+- [:octicons-git-branch-16: **Git**](git.md) 
+- [:material-test-tube: **Test**](test/index.md)
+- [:octicons-terminal-16: **Typer**](typer.md)
 - [:fontawesome-solid-bug-slash: **Troubleshooting**](troubleshoot.md)
 
 </div>

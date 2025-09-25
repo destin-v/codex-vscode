@@ -17,9 +17,13 @@ nav:
       - dev/index.md
       - dev/vscode.md
       - dev/remote.md
-      - dev/version.md
-      - dev/test.md
-      - dev/cicd.md
+      - dev/git.md
+      - Test:
+          - dev/test/index.md
+          - dev/test/pytest.md
+          - dev/test/nox.md
+          - dev/test/cicd.md
+          - dev/test/report.md
       - dev/typer.md
       - dev/troubleshoot.md
   - References:

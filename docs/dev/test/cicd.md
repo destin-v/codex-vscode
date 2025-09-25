@@ -4,7 +4,7 @@ icon: fontawesome/solid/infinity
 
 # :fontawesome-solid-infinity: CI/CD
 
-## Workflows
+## Git Workflows
 GitHub workflows with continuous integration is included.  The GitHub workflows send their tasks to GitHub runners by default.  If you want to route jobs to your **self-hosted** runners make sure to add a **label**.  The steps are:
 
 ```
@@ -23,12 +23,8 @@ jobs:
 !!! important
     If your self-hosted runner is given a label that also matches a GitHub runner (i.e. `ubuntu-latest`) then your job can be scheduled by self-hosted or GitHub runners.  This is useful for situations where you want the job to have the option of running on either kind of runners.
 
-## Badges
-The badge at the top of the README.md will update its status to display whether the CI process succeeds/fails.  Modify it to point to your own repo when starting a new project.
-
 ## Git Runner Limits
 If you are running into rate limiting issues with Git runner you will need to add an authorization token to your Git actions.  The GitHub token must be generated from the public GitHub and *not* your self-hosted GitHub.  This is because the libraries being installed are sourced from the public GitHub.
-
 
 * Generate a GitHub token [**here**](https://github.com/settings/tokens).
 * Navigate to Repo › Settings › Secrets and Variables.

@@ -1,8 +1,8 @@
 ---
-icon: octicons/tag-16
+icon: octicons/git-branch-16
 ---
 
-# :octicons-tag-16: Version
+# :octicons-git-branch-16: Git
 
 ## 🎯 Git
 
