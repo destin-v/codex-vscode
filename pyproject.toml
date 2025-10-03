@@ -35,7 +35,7 @@ docs = [
     "mkdocs-glightbox",
     "mkdocs-material[imaging]",
     "mkdocstrings[python]",
-    "termynal>=0.13.1",
+    "termynal",
 ]
 cicd = [
     "black", 

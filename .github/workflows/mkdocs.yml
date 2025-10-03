@@ -14,7 +14,7 @@ name: mkdocs
 on:
   push:
     branches:
-      - master 
+      - master
       - main
 
 permissions:
@@ -34,13 +34,18 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+          python-version: 3.12
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
-          path: ~/.cache 
+          path: ~/.cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-git-authors-plugin
+      - run: pip install mkdocs-glightbox
+      - run: pip install 'mkdocs-material[imaging]'
+      - run: pip install 'mkdocstrings[python]'
+      - run: pip install termynal
       - run: mkdocs gh-deploy --force
