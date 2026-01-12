@@ -18,3 +18,4 @@ __pycache__
 logs/
 save/
 site/
+docs/assets/tests/*
