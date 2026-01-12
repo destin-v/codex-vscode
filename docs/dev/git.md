@@ -87,3 +87,25 @@ uv run pre-commit install
 ```bash
 uv run pre-commit autoupdate
 ```
+
+## ✅ Tracking Large Files
+
+To track large files use Git LFS.
+
+```bash
+brew install git-lfs
+```
+
+```bash
+git lfs install
+```
+
+Select which files to track:
+```bash
+git lfs track "*.mp4"
+```
+
+Make sure to `.gitattributes` is tracked:
+```bash
+git add .gitattributes
+```

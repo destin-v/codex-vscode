@@ -2,28 +2,20 @@
 icon: material/microsoft-visual-studio-code
 ---
 
-# :material-microsoft-visual-studio-code: VSCode
+# :material-microsoft-visual-studio-code: VsCodium
 
-This is a compilation of configuration settings, extensions, and add-on recommended for development using VSCode.
+This is a compilation of configuration settings, extensions, and add-on recommended for development using VSCodium.
 
 ## 📦 Recommended Extensions
 
-??? note "Languages"
-
-    * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-
 ??? note "Docs"
 
-    * [Automatic Doc String](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
     * [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-    * [Markdown Extended](https://marketplace.visualstudio.com/items?itemName=jebbs.markdown-extended)
 
 
 ??? note "Formatting"
 
     * [Black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
-    * [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
 
 
 ??? note "Testing"
@@ -64,7 +56,7 @@ To customize your themes you need to set them in your settings.json file.  To id
 This feature allows you to view the settings and scope of any item in your editor.  Once you have identified the item you want to change, go to the `settings.json` and make the desired modifications.
 
 ## 🗂️ Tab Removal
-In general you should never need to have tabs.  VSCode provides an ordered list of all files and windows you have opened sorted alphabetically.  This is a much better way of accessing files.
+In general you should never need to have tabs.  VSCodium provides an ordered list of all files and windows you have opened sorted alphabetically.  This is a much better way of accessing files.
 
 * ++cmd+p++     # shows all tabs
 * Settings › Workbench › Editor: Show Tabs [OFF]
@@ -85,9 +77,9 @@ In general you should never need to have tabs.  VSCode provides an ordered list 
 
     * Settings › Remote.SSH: Lockfiles In Tmp [ON]
     * Settings › Remote.SSH: useFlock [OFF]
-    * ++cmd+shift+p++ › Remote-SSH: Kill VSCode Server on Host...
+    * ++cmd+shift+p++ › Remote-SSH: Kill VSCodium Server on Host...
 
-    This will disable file locking and restart the remote VSCode host.  You will have to download all of your extensions once it reconnects with the server.
+    This will disable file locking and restart the remote VSCodium host.  You will have to download all of your extensions once it reconnects with the server.
 
 
 

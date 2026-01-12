@@ -25,7 +25,7 @@ icon: fontawesome/solid/user-graduate
     ---
     Common answers to common problems.
 
--   :fontawesome-solid-bug-slash:{ .lg .middle } **Troubleshooting**
+-   [:fontawesome-solid-bug-slash:{ .lg .middle } **Troubleshooting**](troubleshooting.md)
 
     Where you can find help.
 

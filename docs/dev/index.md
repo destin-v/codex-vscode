@@ -10,7 +10,7 @@ icon: simple/xdadevelopers
 
 <div class="grid cards" markdown>
 
-- [:material-microsoft-visual-studio-code: **VSCode**](vscode.md)
+- [:material-microsoft-visual-studio-code: **VSCodium**](vscodium.md)
 - [:material-remote-desktop: **Remote Development**](remote.md) 
 - [:octicons-git-branch-16: **Git**](git.md) 
 - [:material-test-tube: **Test**](test/index.md)

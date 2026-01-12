@@ -11,12 +11,12 @@ The `tests` folder should mirror `src` to ensure that each submodule is properly
 project
 └───src
 |   └─── __init__.py
-│   └───packageA
+│   └─── ModuleA
 │       └─── __init__.py
 │       └─── A.py
 └───tests
     └─── __init__.py
-    └─── packageA
+    └─── ModuleA
          └─── __init__.py
          └─── A_test.py
 ```
@@ -46,7 +46,7 @@ pytest tests/basic_test.py::test_hello_world # run a specific test
 PyTests offers `coverage` support.  When running PyTests with Coverage, it will generate a HTML that show which parts of your repo have not been traced using PyTests.  This lets you know which areas of your code still need to be tested.
 
 ```bash
-pytest --cov=<repo_path> --cov-report=html:<target_output>
+pytest --cov=./ --cov-report=html:<OUTPUT_PATH>
 ```
 
 ## :material-view-dashboard: Allure
@@ -59,9 +59,9 @@ brew install allure
 To create and view an Allure report:
 
 ```bash
-pytest --alluredir <user_directory>  # run pytests
+pytest --alluredir ./  # run pytests
 ```
 
 ```bash
-allure generate --single-file --output <output_dir> # generate a report (HTML)
+allure generate --single-file --output ./ # generate a report (HTML)
 ```
