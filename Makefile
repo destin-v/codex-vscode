@@ -1,8 +1,8 @@
 # Variables
-PATH_ALLURE_REPORT=docs/assets/tests/pytest-allure-html
-PATH_ALLURE_BUILD=docs/assets/tests/pytest-allure-build
-PATH_PYTEST_COVERAGE=docs/assets/tests/pytest-coverage
-PATH_PYTEST_SUMMARY=docs/assets/tests/pytest-summary
+PATH_ALLURE_REPORT=test-reports/pytest-allure-html
+PATH_ALLURE_BUILD=test-reports/pytest-allure-build
+PATH_PYTEST_COVERAGE=test-reports/pytest-coverage
+PATH_PYTEST_SUMMARY=test-reports/pytest-summary
 PATH_PYPROJECT=pyproject.toml
 
 help:
