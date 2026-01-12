@@ -57,10 +57,16 @@ run:
 clean:
 	# https://www.techgrind.io/explain/what-is-the-best-way-to-clear-out-all-the-__pycache__-folders-and-pycpyo-files-from-a-python3-project
 
+	# Remove top level directories.
+	rm -rf .cache
+	rm -rf .nox
+	rm -rf logs
+	rm -rf site
+
 	# Remove generated folders in sub-directories.
 	find . -type d -name "__pycache__" 		-exec rm -r {} +
 	find . -type d -name ".mypy_cache"		-exec rm -r {} +
-	find . -type d -name ".pytest_cache/"	-exec rm -r {} +
+	find . -type d -name ".pytest_cache"	-exec rm -r {} +
 
 	# Remove all .pyc and .pyo files.
 	find . -type f -name "*.pyc" 			-exec rm -f {} +
