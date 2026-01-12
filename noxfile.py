@@ -22,7 +22,7 @@ def install_uv_env(session: nox.Session) -> None:
     )
 
 
-@nox.session(venv_backend="uv", python=["3.11", "3.12", "3.13", "3.14"])
+@nox.session(venv_backend="uv", python=["3.12", "3.13", "3.14"])
 def pytest(session: nox.Session) -> None:
     """Run PyTest coverage.
 
