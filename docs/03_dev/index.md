@@ -10,17 +10,11 @@ icon: simple/xdadevelopers
 
 <div class="grid cards" markdown>
 
-- [:material-microsoft-visual-studio-code: **VSCodium**](vscodium.md)
-- [:material-remote-desktop: **Remote Development**](remote.md) 
-- [:octicons-git-branch-16: **Git**](git.md) 
-- [:material-test-tube: **Test**](test/index.md)
-- [:octicons-terminal-16: **Typer**](typer.md)
-- [:fontawesome-solid-bug-slash: **Troubleshooting**](troubleshoot.md)
+- [:material-microsoft-visual-studio-code:{ .lg .middle } **VSCodium**](vscodium.md)
+- [:material-remote-desktop:{ .lg .middle } **Remote Development**](remote.md) 
+- [:octicons-git-branch-16:{ .lg .middle } **Git**](git.md) 
+- [:material-test-tube:{ .lg .middle } **Test**](test/index.md)
+- [:octicons-terminal-16:{ .lg .middle } **Typer**](typer.md)
+- [:fontawesome-solid-bug-slash:{ .lg .middle } **Troubleshooting**](troubleshoot.md)
 
 </div>
-
-!!! note
-
-    Make sure to replace the following keywords in this repo:
-
-    `destin-v`
