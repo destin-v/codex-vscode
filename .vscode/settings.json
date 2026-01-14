@@ -1,53 +1,15 @@
 {
-    "___________________________Info___________________________": "",
-    "comments.Description": "VsCode Python",
-    "comments.Date": "Dec-02-2023",
-    "___________________________Formatter___________________________": "",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
-    },
-    "___________________________DocString___________________________": "",
-    "autoDocstring.docstringFormat": "google",
-    "autoDocstring.generateDocstringOnEnter": true,
-    "autoDocstring.guessTypes": true,
-    "autoDocstring.includeExtendedSummary": false,
-    "___________________________Fonts___________________________": "",
-    "debug.console.fontSize": 11.5,
-    "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace, 'MesloLGLDZ Nerd Font'",
-    "editor.fontSize": 11.5,
-    "editor.formatOnSave": true,
-    "terminal.integrated.fontSize": 11.5,
-    "markdown.preview.fontSize": 14.5,
-    "___________________________Workspace___________________________": "",
-    "workbench.editor.showTabs": "single",
+    // VSCodium must set the PYTHONPATH.
+    // https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code
+    "terminal.integrated.env.osx": {"PYTHONPATH": "${workspaceFolder}"},
     "___________________________Rulers___________________________": "",
     "editor.rulers": [
-        90
+        120
     ],
     "editor.wordWrap": "wordWrapColumn",
-    "[log]": {
-        "editor.wordWrap": "off",
-    },
-    "editor.wordWrapColumn": 90,
-    "___________________________Configs___________________________": "",
-    "python.envFile": "${workspaceFolder}/.vscode/.env",
-    "terminal.integrated.env.osx": {
-        "PYTHONPATH": "${workspaceFolder}"
-    },
-    "___________________________Plugins___________________________": "",
-    "python.analysis.typeCheckingMode": "basic",
-    "python.languageServer": "Pylance",
-    "___________________________Linting___________________________": "",
-    "___________________________Testing___________________________": "",
-    "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": [
-        "."
-    ],
-    "python.testing.unittestEnabled": false,
+    "editor.wordWrapColumn": 120,
     "___________________________Themes___________________________": "",
     "workbench.colorTheme": "Visual Studio Light",
-    "workbench.colorCustomizations": {},
     "editor.tokenColorCustomizations": {
         // "functions": {
         //     "fontStyle": "italic bold",
@@ -103,8 +65,9 @@
             },
         ]
     },
-    "___________________________Misc___________________________": "",
-    "files.exclude": {
-        "**/.DS_Store": true,
-    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
 }

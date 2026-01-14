@@ -1,5 +1,5 @@
+import os
 import time
-from enum import Enum
 
 import typer
 from rich import print
@@ -7,14 +7,6 @@ from rich.panel import Panel
 from rich.progress import Progress
 from rich.table import Table
 from typing_extensions import Annotated
-
-
-# Custom types
-class Color(str, Enum):
-    red = "red"
-    blue = "blue"
-    green = "green"
-
 
 # Typer application CLI
 app = typer.Typer(
@@ -26,24 +18,15 @@ app = typer.Typer(
 
 @app.command(help=":wave: **Shows** hello world.")
 def hello_world(
-    name: Annotated[str, typer.Option(help="name")] = "World",
-    formal: Annotated[bool, typer.Option(help="formalism")] = True,
-    color: Annotated[Color, typer.Option(help="color to use")] = Color.blue,
+    name: Annotated[str, typer.Option(help="name")] = os.environ["USER"],
 ):
     """Prints hello to the user.
 
     Args:
-        name (Annotated[str, typer.Option, optional): The name to use. Defaults to "name")]=userid.
-        formal (Annotated[bool, typer.Option, optional): Formalism of speaker. Defaults to "formalism")]=True.
-        color (Annotated[Color, typer.Option, optional): The color to use. Defaults to "color to use")]=Color.blue.
+        name: The name to use. Defaults to userid.
     """
 
-    # Generate a
-    if formal:
-        output = f"[{color}]Hello {name}!"
-    else:
-        output = f"[{color}]Good morning {name}!"
-
+    output = f"Hello {name}!"
     print(Panel(output))
 
 

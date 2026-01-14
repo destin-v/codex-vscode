@@ -1,62 +1,34 @@
-##########################################################################################
-#   DESCRIPTION:  Runs pytests with multiple versions of python.
-#        AUTHOR:  W. Li
-#       VERSION:  1.0
-#       CREATED:  1/6/2024
-#
-# References:
-# * https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-pythonCommon
-#
-##########################################################################################
-
-name: pytests
+name: pytest
 
 on:
-  # Configure the branches you want Github actions to run on.
   # Leave blank if you want to run on all branches.
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
-##########################################################################################
-# Jobs
-##########################################################################################
 jobs:
-  ########################################################################################
-  # Run all tests.
-  ########################################################################################
-  test:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.11", "3.12", "3.13"]
+        python-version: ["3.12", "3.13", "3.14"]
+
     steps:
-      # Checkout repo
       - name: Checkout repo
         uses: actions/checkout@v4
-      # Install uv
-      - name: Install the latest version of uv and set the python version
+
+      - name: Install uv and set python version
         uses: astral-sh/setup-uv@v6
         with:
           python-version: ${{ matrix.python-version }}
-      # Install dependencies.
+
       - name: Python ${{ matrix.python-version }} Install dependencies
-        run: |
-          uv sync --all-extras
-      # Run pytest with coverage.
+        run: uv sync --all-extras
+
       - name: Python ${{ matrix.python-version }} Pytest
         run: >
           uv run pytest
-          --doctest-modules
           --cov=./
           --cov-report=xml
           --cov-report=html:pytest-results-${{ matrix.python-version }}
-      # Save artifacts from pytests.
-      - name: Python ${{ matrix.python-version }} Upload Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: pytest-results-${{ matrix.python-version }}
-          path: pytest-results-${{ matrix.python-version }}
-        # Use always() to always run this step to publish test results when there are test failures
-        if: ${{ always() }}

@@ -4,24 +4,19 @@
 .DS_Store
 profile.html
 profile.json
-*.doctree
-*.pickle
+*.pkl
 *.html
 
 # Tool build directories
 __pycache__
+.cache
 .mypy_cache
 .pytest_cache
 
 # Folders to ignore
 .nox/
-save/
 logs/
-
-# Sphinx build files
-docs/build
-docs/source/_static/pytest-allure*
-docs/source/_static/pytest-coverage
-docs/source/_static/pytest-summary
-docs/source/_static/scalene
-docs/source/pages/api
+save/
+site/
+docs/assets/tests/
+test-reports/

@@ -1,7 +1,0 @@
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAdd secret GH_GITHUB_COM_TOKEN and paste the generated GitHub token.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSettings › Remote.SSH: Lockfiles In Tmp ON\nSettings › Remote.SSH: useFlock OFF\nCmd-Shift-P › Remote-SSH: Kill VSCode Server on Host...\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QShift-Cmd-P › Python: Configure Tests › Pytests › <target_dir>\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q✨ Theme\nTo customize your themes you need to set them in your settings.json file.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QGitHub - tiangolo/typer: Typer, build great CLIs.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTiangolo.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qvs_codex project name\ndestin-v GitHub name\nW. Li author name\\E$"}

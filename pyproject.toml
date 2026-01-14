@@ -6,71 +6,29 @@ requires-python = ">=3.11"
 authors = ["DestinV <peddky8e@duck.com>"]
 license = "MIT"
 readme = "README.md"
-dependencies = []
+dependencies = ["loguru", "rich", "typer"]
 
 [project.optional-dependencies]
-logging = ["loguru", "rich", "typer"]
-cicd = ["black", "mypy", "nox", "pre-commit"]
-math = ["numpy", "pandas"]
-sphinx = [
-    "myst-parser",
-    "pydata-sphinx-theme",
-    "sphinx-book-theme",
-    "sphinx-design",
-]
-pytest = [
-    "allure-pytest",
-    "pytest",
-    "pytest-clarity",
-    "pytest-cov",
-    "pytest-html",
-    "pytest-memray",
-]
+math = ["numpy"]
 
-[tool.pytest.ini_options]
-log_cli = true
-log_cli_level = "INFO"
-log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
-log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+[dependency-groups]
+dev = [
+    { include-group = "docs" },
+    { include-group = "cicd" },
+    { include-group = "pytest" },
+]
+pytest = ["allure-pytest", "pytest", "pytest-cov", "pytest-html", "pytest-rich"]
+docs = ["zensical", "termynal"]
+cicd = ["black", "nox", "pre-commit"]
 
-[tool.black]
-line-length = 100
-include = '\.pyi?$'
-exclude = '''
-    /(
-        \.eggs
-      | \.git
-      | \.mypy_cache
-      | \.pytest_cache
-      | \.venv
-      | \.vscode
-      | \.nox
-      | \docs
-      # The following are specific to Black, you probably don't want those.
-      | blib2to3
-      | tests/data
-      | profiling
-    )/
-    '''
+[tool.ruff]
+line-length = 120
 
 [tool.coverage.run]
 omit = [
-    # omit everything in /docs
-    "docs/*",
-    # omit this single file
-    "noxfile.py",
+    "docs/*",     # omit everything in /docs
+    "noxfile.py", # omit this single file
 ]
-
-[tool.coverage.report]
-exclude_also = [
-    # Exclude the following:
-    "def __repr__",
-    "raise AssertionError",
-    "raise NotImplementedError",
-    # Don't complain about abstract methods, they aren't run:
-    "@(abc\\.)?abstractmethod",
-]
-
 
 [tool.isort]
 profile = "black"
