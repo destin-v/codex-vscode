@@ -10,9 +10,11 @@ def test_app_hello_world():
     assert result.exit_code == 0
     assert "Hello Bob!" in result.output
 
+
 def test_app_progress_bar():
     result = runner.invoke(app, ["progress-bar"])
     assert result.exit_code == 0
+
 
 def test_app_table():
     result = runner.invoke(app, ["table"])

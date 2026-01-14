@@ -8,16 +8,16 @@ on:
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v4
-    
+
     - name: Set up Python 3.14
       uses: actions/setup-python@v5
       with:
         token: ${{ secrets.GH_GITHUB_COM_TOKEN }}
         python-version: "3.14"
-    
+
     - name: Run pre-commit
       uses: pre-commit/action@v3.0.0

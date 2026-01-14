@@ -1,49 +1,42 @@
 ---
-icon: material/microsoft-visual-studio-code
+icon: simple/vscodium
 ---
 
-# :material-microsoft-visual-studio-code: VsCodium
+# :simple-vscodium: VsCodium
 
 This is a compilation of configuration settings, extensions, and add-on recommended for development using VSCodium.
 
 ## 📦 Recommended Extensions
+<div class="grid cards" markdown>
 
-??? note "Docs"
+-   #### Format/Lint
 
-    * [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+    ---
+    * [Ruff](https://open-vsx.org/extension/charliermarsh/ruff)
 
+-   #### Testing
 
-??? note "Formatting"
+    ---
+    * [Python Test Explorer](https://open-vsx.org/extension/littlefoxteam/vscode-python-test-adapter)
 
-    * [Black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+-   #### Version Control
 
+    ---
+    * [Git Graph](https://open-vsx.org/extension/mhutchie/git-graph)
 
-??? note "Testing"
+-   #### Containers
 
-    * [Python Test Explorer for Visual Studio](https://marketplace.visualstudio.com/items?itemName=LittleFoxTeam.vscode-python-test-adapter)
-    * [Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer)
-
-
-??? note "Configuration Control"
-
-    * [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-
-??? note "Containers"
-
-    * [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-    * [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-
-??? note "Remote"
-
-    * [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-    * [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-    * [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer)
+    ---
+    * [Docker](https://open-vsx.org/extension/ms-azuretools/vscode-docker)
 
 
-??? note "Misc"
+-   #### Misc
 
-    * [Back & Forth](https://marketplace.visualstudio.com/items?itemName=nick-rudenko.back-n-forth)
+    ---
     * [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+
+</div>
 
 ## 🅰 Fonts
 You will need to install [**MesloLGLDZ Nerd Font**](https://www.nerdfonts.com/).  This will be used to display glyphs and icons for all of your terminals.

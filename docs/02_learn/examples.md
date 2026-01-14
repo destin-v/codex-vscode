@@ -2,7 +2,7 @@
 icon: material/file-document-check
 ---
 
-> The best way to understanding is a few good examples. 
+> The best way to understanding is a few good examples.
 >
 > **— Isaac Newton**
 

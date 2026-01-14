@@ -51,7 +51,7 @@ reports:
 	@echo "Coverage Report @ ./${PATH_PYTEST_COVERAGE}/index.html"
 	@echo "Allure Report   @ ./${PATH_ALLURE_REPORT}/index.html"
 
-run: 
+run:
 	python src/main.py -h
 
 clean:

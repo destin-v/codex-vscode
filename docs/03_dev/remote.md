@@ -2,7 +2,7 @@
 icon: material/remote-desktop
 ---
 
-# :material-remote-desktop: Remote Development
+# :material-remote-desktop: Remote SSH
 Start by generating SSH keys.
 
 ```bash

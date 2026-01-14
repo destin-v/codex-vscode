@@ -31,4 +31,4 @@ def pytest(session: nox.Session) -> None:
     """
 
     install_uv_env(session)
-    session.run( "pytest",  "--rich")
+    session.run("pytest", "--rich")

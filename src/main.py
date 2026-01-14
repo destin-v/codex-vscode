@@ -1,5 +1,5 @@
-import time
 import os
+import time
 
 import typer
 from rich import print
@@ -18,7 +18,7 @@ app = typer.Typer(
 
 @app.command(help=":wave: **Shows** hello world.")
 def hello_world(
-    name: Annotated[str, typer.Option(help="name")] = os.environ['USER'],
+    name: Annotated[str, typer.Option(help="name")] = os.environ["USER"],
 ):
     """Prints hello to the user.
 

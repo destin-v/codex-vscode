@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - main
-      
+
 permissions:
   contents: read
   pages: write
@@ -17,7 +17,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Configure GitHub Pages.  # can deploy from `docs` branch
         uses: actions/configure-pages@v5
@@ -34,7 +34,7 @@ jobs:
         run: pip install zensical
 
       - name: Zensical build.
-        run: zensical build --clean 
+        run: zensical build --clean
 
       - name: Upload site pages.
         uses: actions/upload-pages-artifact@v4

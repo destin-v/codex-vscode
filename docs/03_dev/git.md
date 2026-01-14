@@ -41,7 +41,7 @@ authors = ["John Doe"]
 license = "MIT"
 readme = "README.md"
 dependencies = [
-    "loguru", 
+    "loguru",
     "rich",
     "typer",
 ]

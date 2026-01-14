@@ -11,7 +11,7 @@ icon: material/rocket-launch
 ## 🛠️ uv
 
 Install a package manager:
-=== "brew"  
+=== "brew"
     ```bash
     brew install uv
     ```

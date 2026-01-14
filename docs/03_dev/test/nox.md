@@ -12,7 +12,7 @@ The `noxfile.py` provides an example of how to run each of these:
 nox --list  # lists out all the available sessions
 ```
 ```console
-Sessions defined in /Volumes/T7_Home/williamli/Projects/codex-vscode/noxfile.py:
+Sessions defined in noxfile.py:
 
 * pytest-3.12 -> Run PyTest coverage.
 * pytest-3.13 -> Run PyTest coverage.
@@ -22,7 +22,7 @@ sessions marked with * are selected, sessions marked with - are skipped.
 ```
 
 ```bash
-nox  
+nox
 ```
 ```console
 nox > Ran multiple sessions:
