@@ -96,3 +96,6 @@ to create a line break.
 
 Or use a blank line for a new paragraph.
 ```
+
+## Why aren't my videos loading?
+Markdown treats video embeddings as if your current Markdown file is a path.  That means you need to use `../` to escape from the current Markdown path in order to find the video.  See [discussion](https://github.com/squidfunk/mkdocs-material/discussions/3984).
